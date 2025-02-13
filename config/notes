@@ -21,3 +21,11 @@ inside the class in the tacos_controller.rb
 def index #the name we used as action
   render :inline => "Test"
 end
+
+# 6. Then go to app > views > tacos.
+# Add a new file and call it index.html.erb (or whatever action.html.erb)
+# Update controller to REPLACE previous inline rendering to     
+# render :template => "tacos/index"
+
+
+%> embedded ruby tag looks like <% %> or <%= xyz %> if you want the code to show up (e.g. not an array)
