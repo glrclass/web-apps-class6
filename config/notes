@@ -9,9 +9,10 @@
 
 # Rails db:setup #only do this once, after this it will always be rails db:migrate
 
-# Go into config > routes.rb and input string
+# Go into config > routes.rb and input string 
+get("/tacos",:controller => "tacos", :action => "index")
 
-# rails generate controller tacos
+then input rails generate controller tacos -- need to stop the server with CTRL+C before you do this step!!
 # rails server
 
 # 5. then add the variable you defined as an action into the controller that you created for tacos
@@ -25,7 +26,10 @@ end
 # 6. Then go to app > views > tacos.
 # Add a new file and call it index.html.erb (or whatever action.html.erb)
 # Update controller to REPLACE previous inline rendering to     
-# render :template => "tacos/index"
+render :template => "tacos/index"
 
 
-%> embedded ruby tag looks like <% %> or <%= xyz %> if you want the code to show up (e.g. not an array)
+# embedded ruby tag looks like <% %> or <%= xyz %> if you want the code to show up (e.g. not an array)
+
+
+# dont forget CTRL+C to stop server and rails server to restart it
